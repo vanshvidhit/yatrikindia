@@ -9,7 +9,7 @@ Yatrik India (यात्रिक – हर सफर, सही कदर) i
 The project is fully pre-configured for instant zero-configuration deployment to **Vercel**:
 
 ### Method A: Connect via GitHub (Recommended)
-1. In the top-right menu of Google AI Studio, click **"Export to GitHub"** (or push your repository to GitHub).
+1. Push your repository to GitHub (`git push origin main`).
 2. Head to [vercel.com/new](https://vercel.com/new).
 3. Import your GitHub repository. Vercel will automatically detect **Vite** and read `vercel.json`.
 4. Click **Deploy**. Your live HTTPS production link will be ready in under 60 seconds!
