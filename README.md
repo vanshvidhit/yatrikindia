@@ -4,34 +4,18 @@ Yatrik India (यात्रिक – हर सफर, सही कदर) i
 
 ---
 
-## ⚡ 1-Click Deployment on Vercel
+## 🌐 Live Production Deployment
 
-The project is fully pre-configured for instant zero-configuration deployment to **Vercel**:
+The application is live and operational on Vercel:
 
-### Method A: Connect via GitHub (Recommended)
-1. Push your repository to GitHub (`git push origin main`).
-2. Head to [vercel.com/new](https://vercel.com/new).
-3. Import your GitHub repository. Vercel will automatically detect **Vite** and read `vercel.json`.
-4. Click **Deploy**. Your live HTTPS production link will be ready in under 60 seconds!
+👉 **[https://yatrikindia.vercel.app](https://yatrikindia.vercel.app)**
 
-### Method B: Deploy using Vercel CLI
-```bash
-# 1. Install Vercel CLI globally
-npm i -g vercel
-
-# 2. Login to your Vercel account
-vercel login
-
-# 3. Deploy directly to production
-vercel --prod
-```
-
-### Pre-Configured Vercel Settings:
-- **Framework:** Vite
-- **Build Command:** `vite build`
-- **Output Directory:** `dist`
-- **SPA Routing:** Automatic rewrite to `/index.html` (excluding `/api/*`)
-- **Serverless Endpoints:** Native `/api/health`, `/api/fares/estimate`, `/api/auth/otp/send`, `/api/auth/otp/verify`
+| Resource | Link / Status |
+| :--- | :--- |
+| **Live Web App** | [yatrikindia.vercel.app](https://yatrikindia.vercel.app) |
+| **Hosting Platform** | Vercel Edge Network |
+| **Build Framework** | Vite + React 19 + TypeScript |
+| **Status** | 🟢 Live & Active |
 
 
 ---

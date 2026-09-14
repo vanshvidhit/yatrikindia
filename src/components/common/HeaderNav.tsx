@@ -11,19 +11,17 @@ import {
   Sun,
   Moon,
   Palette,
-  Rocket,
+  ExternalLink,
 } from "lucide-react";
 import { useRideStore, ViewMode } from "../../store/useRideStore";
 import { MobileAppGuideModal } from "../mobile/MobileAppGuideModal";
 import { BrandLogo } from "./BrandLogo";
 import { BrandIdentityModal } from "./BrandIdentityModal";
-import { VercelDeployModal } from "./VercelDeployModal";
 
 export const HeaderNav: React.FC = () => {
   const { viewMode, setViewMode, theme, toggleTheme, brandName } = useRideStore();
   const [showMobileModal, setShowMobileModal] = useState(false);
   const [showBrandModal, setShowBrandModal] = useState(false);
-  const [showVercelModal, setShowVercelModal] = useState(false);
 
   const NAV_ITEMS: {
     id: ViewMode;
@@ -172,18 +170,19 @@ export const HeaderNav: React.FC = () => {
               <span>Brand & Logo</span>
             </button>
 
-            {/* Deploy with Vercel */}
-            <button
-              id="vercel-deploy-btn"
-              onClick={() => setShowVercelModal(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-white hover:bg-slate-100 text-slate-950 whitespace-nowrap transition-all shadow-md active:scale-95"
-              title="Deploy directly to Vercel with zero config"
+            {/* Live App Link */}
+            <a
+              id="live-app-link"
+              href="https://yatrikindia.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 border border-emerald-500/30 whitespace-nowrap transition-all shadow-sm active:scale-95"
+              title="Open live production app on Vercel"
             >
-              <svg viewBox="0 0 1155 1000" className="w-3.5 h-3.5 fill-black" xmlns="http://www.w3.org/2000/svg">
-                <path d="m577.3 0 577.4 1000H0z" />
-              </svg>
-              <span>Deploy Vercel</span>
-            </button>
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>yatrikindia.vercel.app</span>
+              <ExternalLink className="w-3 h-3 text-emerald-400/80" />
+            </a>
           </div>
 
           {/* Global Dark / Light Theme Toggle */}
@@ -223,13 +222,6 @@ export const HeaderNav: React.FC = () => {
       <BrandIdentityModal
         isOpen={showBrandModal}
         onClose={() => setShowBrandModal(false)}
-      />
-
-      {/* Vercel Deployment Modal */}
-      <VercelDeployModal
-        isOpen={showVercelModal}
-        onClose={() => setShowVercelModal(false)}
-        brandName={brandName}
       />
     </>
   );
