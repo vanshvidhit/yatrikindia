@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Smooth Leaflet Tile & Layer curved edge clipping */
+.leaflet-container {
+  border-radius: inherit !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #020617 !important;
+  font-family: inherit !important;
+  outline: none !important;
+}
+
+.leaflet-pane,
+.leaflet-tile-pane,
+.leaflet-tile-container,
+.leaflet-layer,
+.leaflet-map-pane {
+  border-radius: inherit !important;
+}

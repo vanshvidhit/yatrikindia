@@ -1,0 +1,6 @@
+{
+  "name": "Yatrik India - Smart City Mobility",
+  "description": "यात्रिक (Yatrik India) – Open, zero-surge urban mobility platform for Indian cities with direct UPI payouts, live GPS tracking, landmark pickup assist, and dual Rider & Captain apps.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
